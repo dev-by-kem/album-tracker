@@ -38,19 +38,26 @@ Album Tracker is a React web app for finding albums, playing available 30-second
 
 ## Run locally
 
-1. Install dependencies:
+1. Clone the repository and open the project folder:
+
+   ```bash
+   git clone https://github.com/dev-by-kem/album-tracker.git
+   cd album-tracker
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Create `.env.local` beside `package.json`:
+3. Create `.env.local` beside `package.json`:
 
    ```env
    GEMINI_API_KEY=your_gemini_api_key
    ```
 
-3. Start the app:
+4. Start the app:
 
    ```bash
    npm run dev
