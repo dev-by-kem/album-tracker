@@ -9,8 +9,6 @@ export default function AlbumDetail({ albumId, back }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   useEffect(() => {
-    setData(null);
-    setError("");
     getAlbumTracks(albumId).then(setData).catch((e) => setError(e.message));
   }, [albumId]);
   if (error) return <section className="page"><p className="notice error">{error}</p></section>;

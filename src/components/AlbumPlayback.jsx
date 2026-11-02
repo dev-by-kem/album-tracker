@@ -9,7 +9,6 @@ export default function AlbumPlayback({ title, artist, tracks }) {
   const [useDeezer, setUseDeezer] = useLocalStorage("album-tracker:use-deezer", false);
   useEffect(() => {
     let cancelled = false;
-    setDeezerId(null);
     findDeezerAlbumId(title, artist)
       .then((id) => !cancelled && setDeezerId(id))
       .catch(() => {});

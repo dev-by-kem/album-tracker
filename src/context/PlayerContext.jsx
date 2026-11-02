@@ -2,8 +2,7 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 const PlayerContext = createContext();
 export const usePlayer = () => useContext(PlayerContext);
 export function PlayerProvider({ children }) {
-  const audioRef = useRef(null);
-  if (!audioRef.current) audioRef.current = new Audio();
+  const audioRef = useRef(new Audio());
   const [queue, setQueue] = useState([]);
   const [index, setIndex] = useState(-1);
   const [isPlaying, setIsPlaying] = useState(false);
